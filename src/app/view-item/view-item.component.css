@@ -1,0 +1,32 @@
+
+ul {
+    color: #555;
+    font-size: 1.3rem;
+    list-style-type: none;
+    margin: 2rem 3rem 2rem 0rem;
+}
+
+li {
+    padding: 0.5rem 0;
+    white-space: nowrap;
+}
+
+li div {
+    font-weight: bold;
+}
+
+li label {
+    width: 7rem;
+}
+
+li * {
+    display: inline-block;
+}
+
+.price.up {
+    color: green;
+}
+
+.price.down {
+    color: red;
+}

@@ -1,0 +1,10 @@
+
+<div class="cell company">{{company}}</div>
+<div class="cell ticker">{{ticker}}</div>
+<div class="cell price" [ngClass]="directionClass()">{{price | currency}}</div>    
+
+<mat-icon aria-hidden="false" aria-label="view" class="view" (click)="view()">visibility</mat-icon>
+
+<mat-icon aria-hidden="false" aria-label="delete" class="delete" (click)="delete()">cancel</mat-icon>
+
+

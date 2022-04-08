@@ -1,0 +1,7 @@
+<ul>
+    <li><label>Company:</label><div>{{data.company}}</div></li>
+    <li><label>Symbol:</label><div>{{data.ticker}}</div></li>
+    <li><label>Price:</label><div class="price" 
+        [ngClass]="directionClass()">{{data.price | currency}}</div></li>
+    <li><label>Exchange:</label><div>{{data.exchange}}</div></li>
+</ul>

@@ -1,0 +1,53 @@
+:host {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.1rem;
+    line-height: 50px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price.up {
+    color: green;
+}
+
+.price.down {
+    color: red;
+}
+
+.price {
+    width: 20%;
+}
+
+.ticker {
+    width: 20%;
+}
+
+.company {
+    width: 50%;
+}
+
+mat-icon {
+    width: 10%;
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+mat-icon.view {
+    color: lightblue;
+}
+
+mat-icon.delete {
+    color: #ff000060;
+}

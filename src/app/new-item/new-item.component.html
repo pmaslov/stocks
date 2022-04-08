@@ -1,0 +1,80 @@
+<h2>Add new Favorite</h2>
+<div class="form-group">
+ <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+    <div class="form-input">
+        <input type="text"
+            placeholder="Company Name *"
+            formControlName="company">
+        <div *ngIf="formGroup.get('company')?.invalid &&
+            ( formGroup.get('company')?.dirty ||
+            formGroup.get('company')?.touched )">
+            <div *ngIf="company.errors['required']"> 
+                Company name is required
+            </div>
+            <div *ngIf="formGroup.get('company').errors['minlength']">
+                Company name should contain at least 3 chars
+            </div>
+        </div>
+    </div>
+
+    <div class="form-input">
+        <input type="text"
+            placeholder="Ticker *"
+            name="ticker"
+            formControlName="ticker"
+            style="text-transform:uppercase"
+            >
+        <div *ngIf="formGroup.get('ticker')?.invalid && 
+            ( formGroup.get('ticker')?.dirty ||
+            formGroup.get('ticker')?.touched )">
+            <div *ngIf="formGroup.get('ticker')?.errors['required']">
+                Ticker is required
+            </div>
+            <div *ngIf="formGroup.get('ticker')?.errors['minlength']">
+                Ticker should contain at least 3 chars
+            </div>   
+        </div>
+    </div>
+
+ 
+    <div class="form-input">
+        <input type="number"
+            placeholder="Share Price *"
+            formControlName="price">
+        <div *ngIf="formGroup.get('price')?.invalid &&
+            ( formGroup.get('price')?.dirty ||
+            formGroup.get('price')?.touched )">
+            <div *ngIf="formGroup.get('price')?.errors['required']">
+                Required
+            </div>
+            <div *ngIf="formGroup.get('price')?.errors['min']">
+                Must be more than 0.01
+            </div>
+        </div>
+    </div>
+
+    <div class="form-input">
+        <select type="text"
+            placeholder="Exchange"
+            name="exchange"
+            formControlName="exchange">
+            <option value="" disabled selected>Exchange *</option>
+            <option value="NASDAQ">NASDAQ</option>
+            <option value="NYSE">NYSE</option>
+            <option value="BYX">BYX</option>
+        </select>
+        <div *ngIf="formGroup.get('exchange')?.invalid && 
+            ( formGroup.get('exchange')?.dirty ||
+            formGroup.get('exchange')?.touched )">
+            <div *ngIf="formGroup.get('exchange')?.errors['required']">
+                Exchange is required
+            </div>  
+        </div>
+    </div>
+
+    <div class="form-button">
+     <button type="submit">Submit</button>
+    </div>
+ </form>
+</div>

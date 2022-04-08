@@ -1,0 +1,17 @@
+<div [style.height.px]="fixed_top_height" class="add-section" (click)="add()">
+    <mat-icon aria-hidden="false" aria-label="add" >add_circle</mat-icon>
+    <span>Add New Favorite Stock</span>
+</div>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport" [style.width.px]="width" [style.height.px]="height">
+    <div *cdkVirtualFor="let item of ds;
+                         let odd = odd;" 
+                         [class.alternate]="odd" 
+                         class="example-item">
+        <app-stock [item]="item" 
+        [company]="item.company"
+        [ticker]="item.ticker"
+        [price]="item.price"
+        
+        (viewEvent)="view($event)" (deleteEvent)="delete($event)"></app-stock>
+    </div>
+</cdk-virtual-scroll-viewport>

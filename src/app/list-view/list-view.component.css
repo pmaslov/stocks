@@ -1,0 +1,24 @@
+
+  .example-item {
+    height: 50px;
+  }
+
+  .alternate {
+    background: rgba(127, 127, 127, 0.1);
+  }
+
+  mat-icon {
+    width: 10%;
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+    color: lightgreen;
+}
+
+.add-section {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
