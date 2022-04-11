@@ -1,6 +1,6 @@
 
   .example-item {
-    height: 50px;
+    height: 100px;
   }
 
   .alternate {
@@ -10,8 +10,8 @@
   mat-icon {
     width: 10%;
     font-size: 2rem;
-    height: 50px;
-    line-height: 50px;
+    height: 100px;
+    line-height: 100px;
     color: lightgreen;
 }
 

@@ -2,7 +2,7 @@
     <mat-icon aria-hidden="false" aria-label="add" >add_circle</mat-icon>
     <span>Add New Favorite Stock</span>
 </div>
-<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport" [style.width.px]="width" [style.height.px]="height">
+<cdk-virtual-scroll-viewport itemSize="100" class="example-viewport" [style.width.px]="width" [style.height.px]="height">
     <div *cdkVirtualFor="let item of ds;
                          let odd = odd;" 
                          [class.alternate]="odd" 

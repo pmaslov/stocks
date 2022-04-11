@@ -20,7 +20,7 @@ import { filter } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListViewComponent implements OnInit {
-  readonly fixed_top_height = 80;
+  readonly fixed_top_height = 100;
   width: number = 0;
   height: number = 0;
   ds: MyDataSource | undefined;
