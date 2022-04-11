@@ -30,3 +30,12 @@ li * {
 .price.down {
     color: red;
 }
+
+.form-button {
+    width: 50%;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1rem;
+    height: 3rem;
+    color: red;
+}

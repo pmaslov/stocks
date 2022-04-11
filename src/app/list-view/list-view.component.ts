@@ -75,6 +75,14 @@ export class ListViewComponent implements OnInit {
     this.viewDialogRef = this.dialog.open(ViewItemComponent, {
       data: stockItem,
     });
+    this.viewDialogRef
+      .afterClosed()
+      .pipe(filter((res) => res))
+      .subscribe((res) => {
+        if (res === 'delete') {
+          this.ds?.remove(stockItem);
+        }
+      });
   }
 
   delete(stockItem: StockItem) {

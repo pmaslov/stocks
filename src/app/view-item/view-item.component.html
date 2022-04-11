@@ -4,4 +4,6 @@
     <li><label>Price:</label><div class="price" 
         [ngClass]="directionClass()">{{data.price | currency}}</div></li>
     <li><label>Exchange:</label><div>{{data.exchange}}</div></li>
+    
+    <button (click)="onDelete()" class="form-button">Delete</button>
 </ul>
