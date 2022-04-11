@@ -29,7 +29,9 @@ export class StockComponent implements OnInit {
     this.viewEvent.emit(this.item);
   }
 
-  delete() {
+  delete(e: MouseEvent) {
+    e.stopPropagation();
+    e.preventDefault();
     this.deleteEvent.emit(this.item);
   }
 }
