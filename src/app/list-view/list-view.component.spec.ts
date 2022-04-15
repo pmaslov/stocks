@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material/dialog';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListViewComponent } from './list-view.component';
@@ -8,9 +9,9 @@ describe('ListViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListViewComponent ]
-    })
-    .compileComponents();
+      declarations: [ListViewComponent],
+      providers: [{ provide: MatDialog, useValue: {} }],
+    }).compileComponents();
   });
 
   beforeEach(() => {
