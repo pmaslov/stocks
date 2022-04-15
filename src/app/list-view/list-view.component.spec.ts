@@ -23,4 +23,14 @@ describe('ListViewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render "Add New Favorite Stock"', () => {
+    fixture = TestBed.createComponent(ListViewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.add-section span')?.textContent).toContain(
+      'Add New Favorite Stock'
+    );
+  });
 });
