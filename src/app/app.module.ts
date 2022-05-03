@@ -12,6 +12,8 @@ import { NewItemComponent } from './new-item/new-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ViewItemComponent } from './view-item/view-item.component';
+import { ClicksqComponent } from './clicksq/clicksq.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { ViewItemComponent } from './view-item/view-item.component';
     StockComponent,
     NewItemComponent,
     ViewItemComponent,
+    ClicksqComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { ViewItemComponent } from './view-item/view-item.component';
     MatIconModule,
     ReactiveFormsModule,
     MatDialogModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
